@@ -1,0 +1,26 @@
+<wxs src="../../utils/filter.wxs" module="util"></wxs>
+<!-- wxs文件用wxs标签引入，要modul属性命名，调用的时候要前面加模块名 -->
+<view class="detail-container">
+    <view class="head">
+        <image src="{{detail.image}}" />
+        <text class="author">{{detail.author}}</text>
+        <text class="title">{{detail.title}}</text>
+    </view>
+    <view class="wrap">
+        <text class="headline">短评</text>
+        <text class="shadow" wx:if="{{}}">还没有短评</text>
+        <view class="comment-wrap">
+            <v-tag wx:for="{{util.limit(comments,5)}}" content="{{item.content}}" wx:key="index">
+                <text class='num' slot="after">{{'+'+item.nums}}</text>
+            </v-tag>
+        </view>
+    </view>
+    <view class="wrap">
+        <text class="headline">内容简介</text>
+        <text decode="{{true}}" class="content">{{util.format(detail.summary)}}</text>
+        <!-- <text class="content">{{detail.summary}}</text> -->
+    </view>
+    <view class="wrap">
+        <text class="headline">内容简介</text>
+    </view>
+</view>

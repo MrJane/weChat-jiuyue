@@ -1,0 +1,26 @@
+.container{
+    margin-top: 30rpx;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    box-shadow:2px 2px 3px #e3e3e3;
+    width: 240rpx;
+    height: 360rpx;
+}
+.container image {
+    border-radius: 2px;
+    height: 100%;
+    width: 100%;
+}
+.desc{
+    width: 100%;
+    padding:5rpx 10rpx 8rpx 15rpx;  
+    position:absolute;  
+    background-color: #ffffff;
+  bottom: 0;
+  font-size:24rpx;
+  display: flex; 
+  flex-direction: column;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}

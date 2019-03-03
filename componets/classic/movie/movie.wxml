@@ -1,0 +1,5 @@
+<view class='movie-wrapper'>
+<image class='classic-img' src="{{image}}"></image>
+<image class='tag' src='../images/movie@tag.png'></image>
+<text>{{content}}</text>
+</view>

@@ -1,0 +1,10 @@
+<view bind:tap="onTap" class="container">
+    <image src="{{book.image}}" />
+    <view class="desc">
+        <text class="author">{{book.author}}</text>
+        <text class="title">{{book.title}}</text>
+        <view class="foot">
+            <text class=""></text>
+        </view>
+    </view>
+</view>

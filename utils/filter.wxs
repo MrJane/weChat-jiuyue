@@ -1,0 +1,27 @@
+function formatStr(text) {
+    //正则不能用JavaScript里的正则 要用wxs正则，两个概念
+
+    /**
+     * console.log(text) 在detailwxml文件会打印两次：undefined及detail.summary的内容原因是
+     * 文件一开始加载wxml就会调用一次，然后在请求之后setData又会调用一次，所以要做个判断
+     */
+    // console.log(text)
+    if (!text) {
+        return
+    }
+    var reg = getRegExp('\\\\n', 'g')
+    text.replace(reg, '\n')
+    return text
+}
+//不用用const const 是ES6语法不能用在wxs里 可以用var关键字
+// const formatStr= function (text) {
+//     return 'hello,world'
+// }
+//
+var limit = function(arr,length){
+    return arr.slice(0,length)
+}
+module.exports = {
+    format: formatStr,
+    limit:limit
+}

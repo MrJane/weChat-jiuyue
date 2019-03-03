@@ -1,0 +1,16 @@
+.container{
+  width: 500rpx;
+  display: inline-flex;
+   height:80rpx;
+   background: #f7f7f7;
+   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.title{
+  font-size:28rpx;
+}
+.nav-icon{
+    height:80rpx;
+  width:80rpx;
+}

@@ -1,0 +1,17 @@
+<view class="container">
+    <view class="header">
+        <view class="wrap">
+            <image class="search" src="../../images/icon/search.png" />
+            <text>搜索</text>
+        </view>
+    </view>
+    <view class="content">
+        <image class="head-img" src="../../images/icon/quality.png" />
+        <view class="book-wrap">
+            <v-book wx:key="{{index}}" wx:for="{{books}}" book="{{item}}"></v-book>
+             <!-- <v-book wx:key="id" wx:for="{{books}}" book="{{item}}"></v-book> 如果不用index用对象一个属性
+             做key 不要双大括号及item.属性名 -->
+        </view>
+    </view>
+</view>
+<!-- item 是小程序指定的名字，自己要改这个名字 需要些wx:for-item="itemName" -->
